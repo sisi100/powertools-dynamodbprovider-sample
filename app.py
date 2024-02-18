@@ -53,6 +53,20 @@ def main():
         for parameter, value in user_configs.items():
             print(f"{parameter}: {value}")
 
+        # (おまけ)boto3を使って直接DynamoDBにアクセスする場合
+        print("########## User_Aのパラメーターを取得")
+        response = table.query(
+            KeyConditionExpression="pk = :pk_value",
+            ExpressionAttributeValues={
+                ":pk_value": "User_A",
+            },
+        )
+        items = response.get("Items")
+        for item in items:
+            parameter = item["sk"]
+            value = item["value"]
+            print(f"{parameter}: {value}")
+
 
 if __name__ == "__main__":
     main()
