@@ -1,20 +1,13 @@
-テンプレート
-
-# 構成
-
-![](docs/imgs/diagram.png)
-
-構成の出力には https://github.com/pistazie/cdk-dia を使わせて頂いてます！感謝！
+LambdaPowertoolsでDynamoDBからアイテムを取得するサンプル
 
 # 準備
 
 ```
-npm install
 pip install -r requirements.txt
 ```
 
-# デプロイ
+# 実行
 
 ```
-npx cdk -a "python3 app.py" deploy
+python app.py
 ```

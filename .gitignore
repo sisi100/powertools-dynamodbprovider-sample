@@ -1,5 +1,2 @@
 .venv/
-cdk.out/
-node_modules/
-*.dot
 *.py-e
